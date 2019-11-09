@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         真·知乎屏蔽 Truly Zhihu Shield
 // @namespace    http://tampermonkey.net/
-// @version      0.2.0
+// @version      0.2.1
 // @description  Shield information you don't want to see.
 // @author       Ciyang
 // @license      GPL-3.0
@@ -23,7 +23,7 @@
   let mRequest = (method, href, fn) => {
     let xmlHttp = new window.XMLHttpRequest();
     xmlHttp.open(method, href, true);
-    xmlHttp.onreadystatechange = () => { if (xmlHttp.readyState == 4 && xmlHttp.status == 200) { fn(xmlHttp.responseText); } };
+    xmlHttp.onreadystatechange = () => { if (xmlHttp.readyState === 4 && xmlHttp.status === 200) { fn(xmlHttp.responseText); } };
     xmlHttp.send();
   };
   let userShieldMap = new Map();
@@ -59,7 +59,7 @@
   let timer;
   let moCallback = (mutationsList, observer) => {
     for (const mutation of mutationsList) {
-      if (mutation.type == 'childList' && mutation.addedNodes && mutation.addedNodes.length) {
+      if (mutation.type === 'childList' && mutation.addedNodes && mutation.addedNodes.length) {
         if (timer) clearTimeout(timer);
         timer = setTimeout(checkShielded, 50);
       }
@@ -77,7 +77,7 @@
       timer = setTimeout(checkShielded, 50);
     }
     if (!document.getElementsByClassName('Modal--fullPage').length) { openFlag = false; }
-  }
+  };
   window.addEventListener('load', (event) => {
     if (excludeEditor()) { userShieldMap.set(document.getElementsByClassName('ProfileHeader-name')[0].innerText, false); }
     if (timer) clearTimeout(timer);
