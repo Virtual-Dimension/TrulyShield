@@ -1,14 +1,13 @@
 // ==UserScript==
 // @name         真·知乎屏蔽 Truly Zhihu Shield
 // @namespace    https://github.com/Virtual-Dimension/TrulyShield/blob/master/TrulyZhihuShield.js
-// @version      0.3.0
+// @version      0.3.1
 // @description  Shield information you don't want to see.
 // @author       Ciyang
 // @license      GPL-3.0
 // @match        https://www.zhihu.com/*
 // @match        http://www.zhihu.com/*
 // @grant        GM_xmlhttpRequest
-// @grant        GM_download
 // ==/UserScript==
 
 'use strict';
@@ -163,9 +162,7 @@
     let downloadButton = document.createElement('button');
     downloadButton.innerHTML = '<svg t=\"1573465392430\" class=\"icon\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" p-id=\"1579\" width=\"32\" height=\"32\"><path d=\"M725.333333 0H196.266667C111.786667 0 42.666667 69.12 42.666667 153.6v716.8c0 84.48 69.12 153.6 153.6 153.6h631.466666c84.48 0 153.6-69.12 153.6-153.6V256L725.333333 0z m170.666667 870.4c0 37.546667-30.72 68.266667-68.266667 68.266667H196.266667c-37.546667 0-68.266667-30.72-68.266667-68.266667V153.6c0-37.546667 30.72-68.266667 68.266667-68.266667h409.6v221.866667c0 37.546667 30.72 68.266667 68.266666 68.266667h221.866667v494.933333zM708.266667 290.133333c-9.386667 0-17.066667-7.68-17.066667-17.066666V85.333333l204.8 204.8H708.266667z\" fill=\"#4990EE\" p-id=\"1580\"></path><path d=\"M588.8 716.8H298.666667c-23.893333 0-42.666667 18.773333-42.666667 42.666667s18.773333 42.666667 42.666667 42.666666h290.133333c23.893333 0 42.666667-18.773333 42.666667-42.666666s-18.773333-42.666667-42.666667-42.666667zM256 571.733333c0 23.893333 18.773333 42.666667 42.666667 42.666667h426.666666c23.893333 0 42.666667-18.773333 42.666667-42.666667s-18.773333-42.666667-42.666667-42.666666H298.666667c-23.893333 0-42.666667 18.773333-42.666667 42.666666z\" fill=\"#707070\" p-id=\"1715\"></path></svg>'
     downloadButton.style.margin = '1px';
-    downloadButton.onclick = () => {
-      downloadObject("data.json", shieldKeywords);
-    };
+    downloadButton.onclick = () => { downloadObject("data.json", shieldKeywords); };
     buttonGroup.appendChild(addButton);
     buttonGroup.appendChild(removeButton);
     buttonGroup.appendChild(downloadButton);
