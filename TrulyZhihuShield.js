@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         真·知乎屏蔽 Truly Zhihu Shield
 // @namespace    https://github.com/Virtual-Dimension/TrulyShield/blob/master/TrulyZhihuShield.js
-// @version      0.3.1
+// @version      0.3.2
 // @description  Shield information you don't want to see.
 // @author       Ciyang
 // @license      GPL-3.0
@@ -112,12 +112,11 @@
       try {
         let url = new window.URL(res);
         res = await new Promise((resolve, reject) => {
-          GM.xmlHttpRequest({
+          GM_xmlhttpRequest({
             method: "GET",
+            headers: { "Accept": "application/json" },
             url: url.href,
-            onload: function (response) {
-              resolve(response);
-            }
+            onload: (response) => { resolve(response.responseText); }
           });
         });
       } catch (err) { }
