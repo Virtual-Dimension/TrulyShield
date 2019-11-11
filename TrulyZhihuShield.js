@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         真·知乎屏蔽 Truly Zhihu Shield
-// @namespace    http://tampermonkey.net/
-// @version      0.2.1
+// @namespace    https://github.com/Virtual-Dimension/TrulyShield/blob/master/TrulyZhihuShield.js
+// @version      0.2.2
 // @description  Shield information you don't want to see.
 // @author       Ciyang
 // @license      GPL-3.0
