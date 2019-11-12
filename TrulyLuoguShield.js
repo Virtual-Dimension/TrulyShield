@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name		 真·洛谷屏蔽 Truly Luogu Shield
-// @namespace	 http://tampermonkey.net/
+// @namespace	 https://github.com/Virtual-Dimension/TrulyShield/blob/master/TrulyLuoguShield.js
 // @version	     1.0.2
 // @description  Shield information you don't want to see.
 // @author	     ArachnidaKing
