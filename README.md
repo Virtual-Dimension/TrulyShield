@@ -23,7 +23,6 @@ If there is no site you want in the repository, please submit [Issues](https://g
 ## Completed
 
 - [知乎](https://www.zhihu.com) | [README.md](https://github.com/Virtual-Dimension/TrulyShield/blob/master/README_ZHIHU.md) | [UserScript](https://github.com/Virtual-Dimension/TrulyShield/blob/master/TrulyZhihuShield.js)
-- [洛谷](https://www.luogu.org) | [README.md](https://github.com/Virtual-Dimension/TrulyShield/blob/master/README_LUOGU.md) | [UserScript](https://github.com/Virtual-Dimension/TrulyShield/blob/master/TrulyLuoguShield.js)
 
 ## Todo List
 
